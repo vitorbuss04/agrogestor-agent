@@ -1,0 +1,24 @@
+# Arquivos temporários e sensíveis
+.env
+*.log
+node_modules/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Arquivos do n8n (se houver)
+*.n8n
+
+# Arquivos antigos de desenvolvimento
+CONFIGURACAO_FINAL_N8N.md
+SETUP_COMPLETO.md
+estrutura_database.md
+guia_postgrest.md
+prompt_agrogestor.md
+tool_postgrest_n8n.js
+tool_executar_http.js
+workflow_executor_webhook.js
+README_n8n_setup.md
+*.html

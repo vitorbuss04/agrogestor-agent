@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "URL completa da requisição"
+    },
+    "method": {
+      "type": "string",
+      "description": "Método HTTP (GET, POST, PATCH, DELETE)"
+    },
+    "body": {
+      "type": ["object", "null"],
+      "description": "Corpo da requisição (null para GET/DELETE)"
+    }
+  },
+  "required": ["url", "method"]
+}

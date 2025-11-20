@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "method": {
+      "type": "string",
+      "enum": ["GET", "POST", "PATCH", "DELETE"],
+      "description": "O método HTTP a ser utilizado."
+    },
+    "resource": {
+      "type": "string",
+      "description": "O nome da tabela ou view (endpoint). Ex: 'vacas', 'eventos'."
+    },
+    "query_params": {
+      "type": "string",
+      "description": "A query string com filtros e seleções. Ex: 'select=id,nome&status=eq.Ativa'. Não inclua o '?' inicial."
+    },
+    "body": {
+      "type": "object",
+      "description": "O corpo JSON da requisição (para POST e PATCH).",
+      "additionalProperties": true
+    }
+  },
+  "required": ["method", "resource"]
+}
