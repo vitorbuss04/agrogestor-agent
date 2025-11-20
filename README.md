@@ -10,10 +10,7 @@ agrogestor-agent/
 ├── prompts/
 │   └── system_prompt.md         # Prompt do sistema para o AI Agent
 └── tools/
-    ├── preparar_requisicao/
-    │   ├── schema.json          # Schema da tool
-    │   └── code.js              # Código JavaScript
-    └── executar_http/
+    └── preparar_requisicao/
         ├── schema.json          # Schema da tool
         └── code.js              # Código JavaScript
 ```
@@ -34,11 +31,10 @@ Copie o conteúdo de `prompts/system_prompt.md` para o campo **System Message** 
 
 ### 3. Tool: executar_http
 
-**Criar Code Tool:**
+**Criar HTTP Request Tool:**
 1. Nome: `executar_http`
-2. Description: `Executa a requisição HTTP preparada enviando para o webhook`
-3. Schema: Cole o conteúdo de `tools/executar_http/schema.json`
-4. Code: Cole o conteúdo de `tools/executar_http/code.js`
+2. Description: `Executa a requisição HTTP preparada`
+3. O n8n gerencia automaticamente os parâmetros via `$fromAI()`
 
 ## 🔧 Configuração
 
