@@ -1,26 +1,10 @@
 // Tool: executar_http
 // Recebe os dados preparados e envia para o webhook executor
 
-// Acessa os parâmetros
-let requestUrl, requestMethod, requestBody;
-
-try {
-  requestUrl = typeof url !== 'undefined' ? url : null;
-  requestMethod = typeof method !== 'undefined' ? method : null;
-  requestBody = typeof body !== 'undefined' ? body : null;
-} catch (e) {
-  const params = items[0].json;
-  requestUrl = params.url;
-  requestMethod = params.method;
-  requestBody = params.body;
-}
-
-if (!requestUrl || !requestMethod) {
-  const inputData = $input.all()[0].json;
-  requestUrl = inputData.url;
-  requestMethod = inputData.method;
-  requestBody = inputData.body;
-}
+// Acessa os inputs via 'query' conforme especificação do n8n Code Tool
+const requestUrl = query.url;
+const requestMethod = query.method;
+const requestBody = query.body;
 
 // URL do webhook executor
 const webhookUrl = 'https://n8n.vitorbusstech.shop/webhook/requisição-vacas-supabase';
